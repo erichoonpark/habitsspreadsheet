@@ -4,7 +4,7 @@ import '../imports/api/routines.js';
 
 Meteor.startup(() => {
   	Accounts.onCreateUser(function(options, user) {
-	  user.routines = [{
+	  user.Routines = [{
 	  	name: "Morning Routine",
 	  	habits: [{
 	  		name: "Gym",
