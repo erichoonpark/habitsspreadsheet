@@ -6,15 +6,34 @@ import AccountsUIWrapper from './AccountsUIWrapper.jsx';
 
 import { Routines } from '../api/routines.js';
 
+import Routine from './Routine.jsx'
 
 class App extends Component {
+	renderRoutines(){
+		return this.props.routines.map((routine) => (
+      		<Routine key={routine._id} routine={routine} />
+    	));
+	}
+
 	render() {
 		return (
-			<AccountsUIWrapper />
+			<div>
+				<AccountsUIWrapper />
+				<ul>
+          			{this.renderRoutines()}
+        		</ul>
+        	</div>
 		)
 	}
 }
 
+App.propTypes = {
+  routines: PropTypes.array.isRequired,
+};
+
+
 export default createContainer(() => {
-  return {};
+  return {
+  	routines: Routines.find({}).fetch(),
+  };
 }, App);
