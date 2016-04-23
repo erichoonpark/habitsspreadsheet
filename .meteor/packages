@@ -23,3 +23,5 @@ accounts-ui
 accounts-password
 react-meteor-data
 accounts-base
+twbs:bootstrap
+fortawesome:fontawesome

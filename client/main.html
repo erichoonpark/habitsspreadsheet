@@ -1,9 +1,33 @@
 <head>
   <title>Habits Spreadsheet</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
  
 <body>
-  <h1>Habits Spreadsheet</h1>
+<table class="nav-side-menu">
+    <tr class="brand"><img src="http://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/128/Check-3-icon.png" style="width: 30px;padding-right: 10px;padding-left: 0px;">Habits.io</tr>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+       <!--  Vertical Nav Bar -->
+        <table class="menu-list text-center">
+
+  
+            <tr id="menu-content" class="menu-content collapse out">
+                <tr>
+                  <a href="#">
+                  <i class="fa fa-user fa-lg"></i> User Creds
+                  </a>
+                </tr>
+                <tr>
+                  <a href="#">
+                  <i class="fa fa-dashboard fa-lg"></i> Dashboard
+                  </a>
+                </tr>
+                  <tr id="render-target"></tr>
+            </tr>
+     </table>
+
+     <!-- Spreadsheet UI -->
+     <div></div>
+</table>
   <div id="render-target"></div>
 </body>
